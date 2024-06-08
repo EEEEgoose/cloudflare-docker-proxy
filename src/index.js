@@ -4,13 +4,13 @@ addEventListener("fetch", (event) => {
 });
 
 const routes = {
-  "docker.libcuda.so": "https://registry-1.docker.io",
-  "quay.libcuda.so": "https://quay.io",
-  "gcr.libcuda.so": "https://gcr.io",
-  "k8s-gcr.libcuda.so": "https://k8s.gcr.io",
-  "k8s.libcuda.so": "https://registry.k8s.io",
-  "ghcr.libcuda.so": "https://ghcr.io",
-  "cloudsmith.libcuda.so": "https://docker.cloudsmith.io",
+  "docker.example.com": "https://registry-1.docker.io",
+  "quay.example.com": "https://quay.io",
+  "gcr.example.com": "https://gcr.io",
+  "k8s-gcr.example.com": "https://k8s.gcr.io",
+  "k8s.example.com": "https://registry.k8s.io",
+  "ghcr.example.com": "https://ghcr.io",
+  "cloudsmith.example.com": "https://docker.cloudsmith.io",
 };
 
 function routeByHosts(host) {
@@ -82,7 +82,7 @@ async function handleRequest(request) {
     const wwwAuthenticate = parseAuthenticate(authenticateStr);
     return await fetchToken(wwwAuthenticate, url.searchParams);
   }
-  // foward requests
+  // forward requests
   const newUrl = new URL(upstream + url.pathname);
   const newReq = new Request(newUrl, {
     method: request.method,

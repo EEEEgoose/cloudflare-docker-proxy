@@ -2,19 +2,35 @@ name = "cloudflare-docker-proxy"
 workers_dev = true
 main = "src/index.js"
 compatibility_date = "2021-12-07"
+routes = [
+  { pattern = "docker.example.com", custom_domain = true },
+  { pattern = "quay.example.com", custom_domain = true },
+  { pattern = "gcr.example.com", custom_domain = true },
+  { pattern = "k8s-gcr.example.com", custom_domain = true },
+  { pattern = "k8s.example.com", custom_domain = true },
+  { pattern = "ghcr.example.com", custom_domain = true },
+  { pattern = "cloudsmith.example.com", custom_domain = true },
+  { pattern = "docker.example.com/*", zone_name = "example.com" },
+  { pattern = "quay.example.com/*", zone_name = "example.com" },
+  { pattern = "gcr.example.com/*", zone_name = "example.com" },
+  { pattern = "k8s-gcr.example.com/*", zone_name = "example.com" },
+  { pattern = "k8s.example.com/*", zone_name = "example.com" },
+  { pattern = "ghcr.example.com/*", zone_name = "example.com" },
+  { pattern = "cloudsmith.example.com/*", zone_name = "example.com" },
+]
 
 [dev]
 ip = "0.0.0.0"
 port = 8787
-local_protocol="http"
-upstream_protocol="https"
+local_protocol = "http"
+upstream_protocol = "https"
 
 [vars]
-MODE="production"
-LOCAL_ADDRESS=""
-TARGET_UPSTREAM=""
+MODE = "production"
+LOCAL_ADDRESS = ""
+TARGET_UPSTREAM = ""
 
 [env.dev.vars]
-MODE="debug"
-LOCAL_ADDRESS="http://192.168.10.102:8787"
-TARGET_UPSTREAM="https://registry-1.docker.io"
+MODE = "debug"
+LOCAL_ADDRESS = "http://192.168.10.102:8787"
+TARGET_UPSTREAM = "https://registry-1.docker.io"
