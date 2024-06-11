@@ -3,20 +3,20 @@ workers_dev = true
 main = "src/index.js"
 compatibility_date = "2021-12-07"
 routes = [
-  { pattern = "docker.example.com", custom_domain = true },
-  { pattern = "quay.example.com", custom_domain = true },
-  { pattern = "gcr.example.com", custom_domain = true },
-  { pattern = "k8s-gcr.example.com", custom_domain = true },
-  { pattern = "k8s.example.com", custom_domain = true },
-  { pattern = "ghcr.example.com", custom_domain = true },
-  { pattern = "cloudsmith.example.com", custom_domain = true },
-  { pattern = "docker.example.com/*", zone_name = "example.com" },
-  { pattern = "quay.example.com/*", zone_name = "example.com" },
-  { pattern = "gcr.example.com/*", zone_name = "example.com" },
-  { pattern = "k8s-gcr.example.com/*", zone_name = "example.com" },
-  { pattern = "k8s.example.com/*", zone_name = "example.com" },
-  { pattern = "ghcr.example.com/*", zone_name = "example.com" },
-  { pattern = "cloudsmith.example.com/*", zone_name = "example.com" },
+  { pattern = "docker.yjgs.eu.org", custom_domain = true },
+  { pattern = "quay.yjgs.eu.org", custom_domain = true },
+  { pattern = "gcr.yjgs.eu.org", custom_domain = true },
+  { pattern = "k8s-gcr.yjgs.eu.org", custom_domain = true },
+  { pattern = "k8s.yjgs.eu.org", custom_domain = true },
+  { pattern = "ghcr.yjgs.eu.org", custom_domain = true },
+  { pattern = "cloudsmith.yjgs.eu.org", custom_domain = true },
+  { pattern = "docker.yjgs.eu.org/*", zone_name = "yjgs.eu.org" },
+  { pattern = "quay.yjgs.eu.org/*", zone_name = "yjgs.eu.org" },
+  { pattern = "gcr.yjgs.eu.org/*", zone_name = "yjgs.eu.org" },
+  { pattern = "k8s-gcr.yjgs.eu.org/*", zone_name = "yjgs.eu.org" },
+  { pattern = "k8s.yjgs.eu.org/*", zone_name = "yjgs.eu.org" },
+  { pattern = "ghcr.yjgs.eu.org/*", zone_name = "yjgs.eu.org" },
+  { pattern = "cloudsmith.yjgs.eu.org/*", zone_name = "yjgs.eu.org" },
 ]
 
 [dev]
